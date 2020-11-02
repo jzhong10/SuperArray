@@ -5,8 +5,8 @@ public class SuperArray {
     private int size;
 
     public SuperArray() {
-      size = 10;
-      data = new String[size];
+      data = new String[10];
+      size = 0;
     }
 
     public int size() {
@@ -14,15 +14,16 @@ public class SuperArray {
     }
 
     public boolean add(String element) {
-      data[size-1] = element;
+      if (size == data.length) {
+        data.resize();
+      }
+      data[size] = element;
+      size++;
       return true;
     }
 
     public String get(int index) {
-      if (index<size) {
-        return data[index];
-      }
-      return "Out of Bounds foolish one";
+      return data[index];
     }
 
     public String set(int index, String element) {
@@ -32,11 +33,12 @@ public class SuperArray {
     }
 
     public void resize() {
-      String[] newData = new String[size*2];
-      for (int i = 0; i < size; i++) {
+      String[] newData = new String[data.length*2];
+      for (int i = 0; i < data.length; i++) {
         newData[i] = data[i];
       }
       data = newData;
-      size *= 2;
     }
+
+
 }
