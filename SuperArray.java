@@ -5,11 +5,25 @@ public class SuperArray {
     private int size;
 
     public SuperArray() {
-      data = new String[10];
       size = 10;
+      data = new String[size];
     }
 
     public int size() {
       return size;
     }
+
+    public boolean add(String element) {
+      data[size-1] = element;
+      return true;
+    }
+
+    public String get(int index) {
+      if (index<size) {
+        return data[index];
+      }
+      return "Out of Bounds foolish one";
+    }
+
+
 }
