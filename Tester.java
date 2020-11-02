@@ -7,5 +7,10 @@ public class Tester {
       System.out.println(a1.get(9));
       System.out.println(a1.add("added new string"));
       System.out.println(a1.get(9));
+      System.out.println(a1.set(9, "replaced string"));
+      System.out.println(a1.get(9));
+      a1.resize();
+      System.out.println(a1.get(9));
+      System.out.println(a1.get(18));
     }
 }

@@ -25,5 +25,18 @@ public class SuperArray {
       return "Out of Bounds foolish one";
     }
 
+    public String set(int index, String element) {
+      String prev = data[index];
+      data[index] = element;
+      return prev;
+    }
 
+    public void resize() {
+      String[] newData = new String[size*2];
+      for (int i = 0; i < size; i++) {
+        newData[i] = data[i];
+      }
+      data = newData;
+      size *= 2;
+    }
 }
