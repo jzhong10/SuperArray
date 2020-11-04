@@ -96,4 +96,21 @@ public class SuperArray {
       size--;
       return str;
     }
+
+    public int indexOf(String str) {
+      for (int i = 0; i<size; i++) {
+        if (data[i]==str) {
+          return i;
+        }
+      }
+      return -1;
+    }
+
+    public String[] toArray() {
+      String[] arr = new String[size];
+      for (int i = 0; i<size; i++) {
+        arr[i] = data[i];
+      }
+      return arr;
+    }
 }

@@ -59,6 +59,7 @@ public class Tester {
       System.out.println(b1.toString());
       System.out.println(b1.remove(2));
       System.out.println(b1.toString());
-
+      System.out.println(b1.indexOf("ok"));
+      System.out.println(Arrays.toString(b1.toArray()));
     }
 }
