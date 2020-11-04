@@ -80,11 +80,20 @@ public class SuperArray {
       if (size==data.length) {
         resize();
       }
-      System.out.println("Before" + Arrays.toString(data));
+      //System.out.println("Before" + Arrays.toString(data));
       for (int i = size; i>index; i--) {
         data[i] = data[i-1];
       }
       data[index] = element;
-      System.out.println("After" + Arrays.toString(data));
+      //System.out.println("After" + Arrays.toString(data));
+    }
+
+    public String remove(int index) {
+      String str = data[index];
+      for (int i = index; i<size; i++) {
+        data[i] = data[i+1];
+      }
+      size--;
+      return str;
     }
 }

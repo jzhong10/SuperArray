@@ -50,8 +50,14 @@ public class Tester {
       b1.add("ohmy");
       b1.add("ok");
       System.out.println(b1.toString());
+      System.out.println(b1.size());
       b1.add(1, "how");
       b1.add("oh");
+      System.out.println(b1.toString());
+      System.out.println(b1.size());
+      System.out.println(b1.remove(4));
+      System.out.println(b1.toString());
+      System.out.println(b1.remove(2));
       System.out.println(b1.toString());
 
     }
