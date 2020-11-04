@@ -14,7 +14,7 @@ public class Tester {
       System.out.println(a1.get(9));
       System.out.println(a1.get(18));
       */
-      
+
       /*
       System.out.println(a1.get(9));
       for (int i = 0; i<12; i++) {
@@ -46,5 +46,13 @@ public class Tester {
 */
       SuperArray b1 = new SuperArray(7);
       System.out.println(b1.size());
+      b1.add("word");
+      b1.add("ohmy");
+      b1.add("ok");
+      System.out.println(b1.toString());
+      b1.add(1, "how");
+      b1.add("oh");
+      System.out.println(b1.toString());
+
     }
 }

@@ -74,4 +74,17 @@ public class SuperArray {
       }
       return false;
     }
+
+    public void add(int index, String element) {
+      size++;
+      if (size==data.length) {
+        resize();
+      }
+      System.out.println("Before" + Arrays.toString(data));
+      for (int i = size; i>index; i--) {
+        data[i] = data[i-1];
+      }
+      data[index] = element;
+      System.out.println("After" + Arrays.toString(data));
+    }
 }
