@@ -21,11 +21,25 @@ public class Tester {
       }
 
       SuperArray words = new SuperArray();
+      System.out.println(words.toString());
       words.add("kani");
+      System.out.println(words.toString());
       words.add("uni");
+      System.out.println(words.toString());
       words.add("ebi");
       for(int i = 0; i < words.size(); i++){
         System.out.println( words.get(i) );
       }
+      System.out.println();
+      System.out.println(words.contains("uno"));
+      System.out.println(words.contains("uni"));
+      System.out.println(words.contains("unI"));
+      System.out.println();
+      System.out.println(words.isEmpty());
+      System.out.println(words.toString());
+      words.clear();
+      System.out.println(words.isEmpty());
+      System.out.println(words.toString());
+      System.out.println();
     }
 }
