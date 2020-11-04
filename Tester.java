@@ -14,6 +14,8 @@ public class Tester {
       System.out.println(a1.get(9));
       System.out.println(a1.get(18));
       */
+      
+      /*
       System.out.println(a1.get(9));
       for (int i = 0; i<12; i++) {
         a1.add("" + i);
@@ -41,5 +43,8 @@ public class Tester {
       System.out.println(words.isEmpty());
       System.out.println(words.toString());
       System.out.println();
+*/
+      SuperArray b1 = new SuperArray(7);
+      System.out.println(b1.size());
     }
 }
