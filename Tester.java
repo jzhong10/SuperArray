@@ -99,5 +99,24 @@ public class Tester {
       System.out.println(d1.indexOf("42"));
       d1.set(9, "f8");
       System.out.println(d1.lastIndexOf("42"));
+
+      SuperArray n1 = new SuperArray();
+      for (int i = 0; i<20; i++) {
+        n1.add("" + i);
+      }
+
+      SuperArray n2 = new SuperArray();
+      for (int i = 0; i<20; i++) {
+        n2.add("" + i);
+      }
+
+
+      System.out.println(n1);
+      System.out.println(n2);
+      System.out.println(n1.equals(n2));
+      n1.add("nono");
+      System.out.println(n1.equals(n2));
+      n1.remove(20);
+      System.out.println(n1.equals(n2));
     }
 }
