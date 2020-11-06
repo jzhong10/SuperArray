@@ -45,6 +45,7 @@ public class Tester {
       System.out.println();
 */
       SuperArray b1 = new SuperArray(7);
+      /*
       System.out.println(b1.size());
       b1.add("word");
       b1.add("ohmy");
@@ -61,5 +62,26 @@ public class Tester {
       System.out.println(b1.toString());
       System.out.println(b1.indexOf("ok"));
       System.out.println(Arrays.toString(b1.toArray()));
+      System.out.println(b1.remove(0));
+      System.out.println(b1.toString());
+      */
+      SuperArray c1 = new SuperArray(1);
+      for (int i = 0; i<20; i++) {
+        c1.add("" + i);
+      }
+      System.out.println(c1.toString());
+      while (!c1.isEmpty()) {
+        System.out.println(c1.toString());
+        //System.out.println(c1.remove(c1.size()-1));
+        System.out.println(c1.remove((int) (Math.random() * (c1.size()) )));
+      }
+      /*
+      System.out.println(c1.remove(2));
+      System.out.println(c1.toString());
+      System.out.println(c1.remove(1));
+      System.out.println(c1.toString());
+      System.out.println(c1.remove(0));
+      System.out.println(c1.toString());
+      */
     }
 }
