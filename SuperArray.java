@@ -90,7 +90,10 @@ public class SuperArray {
 
     public String remove(int index) {
       String str = data[index];
-      for (int i = index; i<size; i++) {
+      if (data.length==size || data[index]!=null) {
+        resize();
+      }
+      for (int i = index; i < size; i++) {
         data[i] = data[i+1];
       }
       size--;
