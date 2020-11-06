@@ -116,4 +116,13 @@ public class SuperArray {
       }
       return arr;
     }
+
+    public int lastIndexOf(String str) {
+      for (int i = size-1; i>=0; i--) {
+        if (data[i].equals(str)) {
+          return i;
+        }
+      }
+      return -1;
+    }
 }
