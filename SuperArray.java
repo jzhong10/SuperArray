@@ -68,7 +68,7 @@ public class SuperArray {
 
     public boolean contains(String s) {
       for (int i = 0; i<size; i++) {
-        if (data[i]==s) {
+        if (data[i].equals(s)) {
           return true;
         }
       }
