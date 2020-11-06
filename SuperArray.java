@@ -99,7 +99,7 @@ public class SuperArray {
 
     public int indexOf(String str) {
       for (int i = 0; i<size; i++) {
-        if (data[i]==str) {
+        if (data[i].equals(str)) {
           return i;
         }
       }
