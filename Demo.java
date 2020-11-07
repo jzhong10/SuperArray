@@ -15,12 +15,14 @@ public class Demo {
   }
 
   public static SuperArray findOverlap(SuperArray a, SuperArray b) {
-    removeDuplicates(a);
-    removeDuplicates(b);
+    SuperArray a1 = a.copy();
+    SuperArray b1 = b.copy();
+    removeDuplicates(a1);
+    removeDuplicates(b1);
     SuperArray sarr = new SuperArray();
-    for (int i = 0; i < a.size(); i++) {
-      if (b.contains(a.get(i))) {
-        sarr.add(a.get(i));
+    for (int i = 0; i < a1.size(); i++) {
+      if (b1.contains(a1.get(i))) {
+        sarr.add(a1.get(i));
       }
     }
     return sarr;

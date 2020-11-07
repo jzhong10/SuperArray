@@ -137,4 +137,12 @@ public class SuperArray {
       }
       return true;
     }
+
+    public SuperArray copy() {
+      SuperArray arr = new SuperArray(size);
+      for (int i = 0; i < size; i++) {
+        arr.add(data[i]);
+      }
+      return arr;
+    }
 }

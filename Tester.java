@@ -119,6 +119,22 @@ public class Tester {
       n1.remove(20);
       System.out.println(n1.equals(n2));
 
-      
+      System.out.println();
+
+      SuperArray no1 = new SuperArray(); //a
+      no1.add("9");   no1.add("1");     no1.add("2");
+      no1.add("2");   no1.add("3");     no1.add("4");
+      SuperArray no2 = new SuperArray(); //b
+      no2.add("0");   no2.add("4");     no2.add("4");
+      no2.add("2");   no2.add("2");     no2.add("9");
+      System.out.println(no1);
+      System.out.println(no1.lastIndexOf("2"));
+      System.out.println(no2);
+      System.out.println(no2.lastIndexOf("2"));
+      if ( no1.lastIndexOf("2") == 3 ) {
+        System.out.println("lastIndexOf test: SUCCESS");
+      } else {
+        System.out.println("\t\t\tlastIndexOf test: FAIL");
+      }
     }
 }
