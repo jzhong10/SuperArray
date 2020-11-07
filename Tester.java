@@ -118,5 +118,7 @@ public class Tester {
       System.out.println(n1.equals(n2));
       n1.remove(20);
       System.out.println(n1.equals(n2));
+
+      
     }
 }
