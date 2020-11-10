@@ -65,6 +65,8 @@ public class Tester {
       System.out.println(b1.remove(0));
       System.out.println(b1.toString());
       */
+
+      /*
       SuperArray c1 = new SuperArray();
       for (int i = 0; i<20; i++) {
         c1.add("" + i);
@@ -81,6 +83,7 @@ public class Tester {
       }
       System.out.println(c1.toString());
 
+      */
 
       /*
       System.out.println(c1.remove(2));
@@ -91,6 +94,7 @@ public class Tester {
       System.out.println(c1.toString());
       */
 
+      /*
       SuperArray d1 = new SuperArray();
       while (d1.size()<10) {
         d1.add("42");
@@ -136,5 +140,12 @@ public class Tester {
       } else {
         System.out.println("\t\t\tlastIndexOf test: FAIL");
       }
+      */
+      try {
+        SuperArray t = new SuperArray(-5);
+      } catch (IllegalArgumentException e) {
+        System.out.println("Failure");
+      }
+
     }
 }
