@@ -162,5 +162,13 @@ public class Tester {
       } catch (IndexOutOfBoundsException e) {
         System.out.println("could not get index even with null value");
       }
+
+      try {
+        System.out.println(t1.set(2, "ohwow"));
+      } catch (IndexOutOfBoundsException e) {
+        System.out.println("setting at a bad index");
+      }
+
+      System.out.println(t1.set(0, "ohwow"));
     }
 }

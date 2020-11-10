@@ -32,12 +32,15 @@ public class SuperArray {
 
     public String get(int index) {
       if (index < 0 || index >= size) {
-        throw new IndexOutOfBoundsException("index " + index + " is out of bounds for size " + size);
+        throw new IndexOutOfBoundsException("index " + index + " is out of bounds for SuperArray sized " + size);
       }
       return data[index];
     }
 
     public String set(int index, String element) {
+      if (index < 0 || index >= size) {
+        throw new IndexOutOfBoundsException("index " + index + " is out of bounds for SuperArray sized " + size);
+      }
       String prev = data[index];
       data[index] = element;
       return prev;
