@@ -147,5 +147,20 @@ public class Tester {
         System.out.println("Failure");
       }
 
+      SuperArray t1 = new SuperArray(0);
+      t1.add("ok");
+      t1.add("ohmy");
+      try {
+        System.out.println(t1.get(2));
+      } catch (IndexOutOfBoundsException e) {
+        System.out.println("could not get index");
+      }
+      t1.resize();
+      //t1.add("ok");
+      try {
+        System.out.println(t1.get(2));
+      } catch (IndexOutOfBoundsException e) {
+        System.out.println("could not get index even with null value");
+      }
     }
 }

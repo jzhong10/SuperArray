@@ -31,6 +31,9 @@ public class SuperArray {
     }
 
     public String get(int index) {
+      if (index < 0 || index >= size) {
+        throw new IndexOutOfBoundsException("index " + index + " is out of bounds for size " + size);
+      }
       return data[index];
     }
 
@@ -41,7 +44,7 @@ public class SuperArray {
     }
 
     public void resize() {
-      String[] newData = new String[data.length*2];
+      String[] newData = new String[data.length*2+1];
       for (int i = 0; i < data.length; i++) {
         newData[i] = data[i];
       }
