@@ -169,6 +169,37 @@ public class Tester {
         System.out.println("setting at a bad index");
       }
 
-      System.out.println(t1.set(0, "ohwow"));
+      try {
+        t1.add(5, "ohwow");
+      } catch (IndexOutOfBoundsException e) {
+        System.out.println("adding at a bad index");
+      }
+
+      try {
+        t1.add(0, "ohwow");
+      } catch (IndexOutOfBoundsException e) {
+        System.out.println("adding at a bad index");
+      }
+      System.out.println(t1);
+      //t1.add(5, "ohwow");
+
+      try {
+        t1.remove(-4);
+      } catch (IndexOutOfBoundsException e) {
+        System.out.println("removing at a bad index");
+      }
+
+      try {
+        t1.remove(7);
+      } catch (IndexOutOfBoundsException e) {
+        System.out.println("removing at a bad index");
+      }
+
+      try {
+        t1.remove(1);
+      } catch (IndexOutOfBoundsException e) {
+        System.out.println("removing at a bad index");
+      }
+      System.out.println(t1);
     }
 }
