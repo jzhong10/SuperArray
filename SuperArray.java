@@ -85,19 +85,18 @@ public class SuperArray {
     }
 
     public void add(int index, String element) {
-      if (index < 0 || index >= size) {
+      if (index < 0 || index > size) {
         throw new IndexOutOfBoundsException("Can't add at index " + index + " - is out of bounds for this SuperArray sized " + size);
       }
       size++;
       if (size==data.length) {
         resize();
       }
-      //System.out.println("Before" + Arrays.toString(data));
       for (int i = size; i>index; i--) {
         data[i] = data[i-1];
       }
       data[index] = element;
-      //System.out.println("After" + Arrays.toString(data));
+
     }
 
     public String remove(int index) {
